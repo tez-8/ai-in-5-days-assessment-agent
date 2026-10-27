@@ -1,0 +1,46 @@
+{
+  "eval_cases": [
+    {
+      "eval_case_id": "device_warranty_lookup_laptop_002",
+      "prompt": {
+        "role": "user",
+        "parts": [
+          {
+            "text": "Can you check the operational status and warranty coverage of my company machine, LAPTOP-002?"
+          }
+        ]
+      },
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [
+            {
+              "text": "Device LAPTOP-002 is a ThinkPad T14 with operational status 'Needs Repair' and its warranty is 'Expired'."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "eval_case_id": "troubleshooting_runbook_lookup",
+      "prompt": {
+        "role": "user",
+        "parts": [
+          {
+            "text": "What is our enterprise policy when a ThinkPad laptop needs repair and its warranty has expired?"
+          }
+        ]
+      },
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [
+            {
+              "text": "When a device needs repair and its warranty is expired, log a HIGH severity support ticket and request emergency hardware replacement approval."
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

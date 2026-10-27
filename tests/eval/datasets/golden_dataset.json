@@ -1,0 +1,88 @@
+{
+  "eval_cases": [
+    {
+      "eval_case_id": "device_warranty_lookup_laptop_002",
+      "prompt": {
+        "role": "user",
+        "parts": [
+          {
+            "text": "Can you check the operational status and warranty coverage of my company machine, LAPTOP-002?"
+          }
+        ]
+      },
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [
+            {
+              "text": "Device LAPTOP-002 is a ThinkPad T14 with operational status 'Needs Repair' and its warranty is 'Expired'."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "eval_case_id": "invalid_device_id_guided_recovery",
+      "prompt": {
+        "role": "user",
+        "parts": [
+          {
+            "text": "Please check the warranty status of device INVALID_ID_NO_HYPHEN."
+          }
+        ]
+      },
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [
+            {
+              "text": "Please provide a valid corporate asset tag in '<TYPE>-<NUMBER>' format, such as 'LAPTOP-002' or 'MACBOOK-104'."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "eval_case_id": "troubleshooting_runbook_lookup",
+      "prompt": {
+        "role": "user",
+        "parts": [
+          {
+            "text": "What is our enterprise policy when a ThinkPad laptop needs repair and its warranty has expired?"
+          }
+        ]
+      },
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [
+            {
+              "text": "When a device needs repair and its warranty is expired, do not dispatch vendor warranty repair; log a HIGH severity support ticket and initiate an emergency hardware replacement request subject to human approval."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "eval_case_id": "high_stakes_hardware_replacement_hitl",
+      "prompt": {
+        "role": "user",
+        "parts": [
+          {
+            "text": "My device LAPTOP-002 is broken and out of warranty. Please order an emergency replacement MacBook Pro 16 M4 for user tez because my primary engineering workstation will not boot."
+          }
+        ]
+      },
+      "reference": {
+        "response": {
+          "role": "model",
+          "parts": [
+            {
+              "text": "The emergency hardware replacement requisition has been staged and requires human supervisor confirmation before fulfillment."
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
